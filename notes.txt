@@ -1,0 +1,2 @@
+Make an "add story" button maybe in the header.
+Take the picture in the header as a "back to mainpage" link.
