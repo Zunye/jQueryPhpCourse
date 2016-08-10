@@ -1,7 +1,12 @@
+		<?php include("top.php"); ?>
 		<header>
-			<a href="login.php" class="button">Login-Button</a>
+			<a href="#" id="loginButton" class="button">Login-Button</a>
+			<a href="#" id="storyButton" class="button">Story-Button</a>
 		</header>
-		<div class="mainPage">
+		<div id="home_image">
+			<a href="#pageStart"><img src="img/Moomin_kuva.png" height="150px"/></a>
+		</div>
+		<div class="mainPage" id="pageStart">
 			<p>Some Text with an Image</p>
 		</div>
 		<div class="storyShortcut">
@@ -20,9 +25,12 @@
 				<p>Third story</p>
 			</div>
 		</div>
-		<div id="login_area" class="formArea">
-			<div id="login_field" class="formField">
-				<form action="welcome.php" method="post">
+		<div id="login_area" class="form_area">
+			<div id="login_field" class="form_field">
+			<div class="cross">
+					x
+				</div>
+				<form action="welcome.php" method="post" id="login_form">
 					<table>
 						<tr>
 							<td>Name/Email:</td>
@@ -39,9 +47,12 @@
 				</form>
 			</div>
 		</div>
-		<div id="registration_area" class="formArea">
-			<div id="registration_field" class="formField">
-				<form action="welcome.php" method="post">
+		<div id="registration_area" class="form_area">
+			<div id="registration_field" class="form_field">
+				<div class="cross">
+					x
+				</div>
+				<form action="welcome.php" method="post" id="register_form">
 					<table>
 						<tr>
 							<td>Email:</td>
@@ -62,9 +73,12 @@
 				</form>
 			</div>
 		</div>
-		<div id="story_area" class="formArea">
-			<div id="story_field" class="formField">
-				<form action="welcome.php" method="post">
+		<div id="story_area" class="form_area">
+			<div id="story_field" class="form_field">
+			<div class="cross">
+					x
+				</div>
+				<form action="welcome.php" method="post" id="story_form">
 					<table>
 						<tr>
 							<td>Title:</td>
@@ -72,7 +86,7 @@
 						</tr>
 						<tr>
 							<td>Story:</td>
-							<td><input type="text" name="story"></td>
+							<td><textarea form="story_form" name="story">Enter story here...</textarea></td>
 						</tr>
 						<tr>
 							<td colspan="2"><input type="submit"></td>
@@ -81,13 +95,16 @@
 				</form>
 			</div>
 		</div>
-		<div id="comment_area" class="formArea">
-			<div id="comment_field" class="formField">
-				<form action="welcome.php" method="post">
+		<div id="comment_area" class="form_area">
+			<div id="comment_field" class="form_field">
+			<div class="cross">
+					x
+				</div>
+				<form action="welcome.php" method="post" id="comment_form">
 					<table>
 						<tr>
 							<td>Comment:</td>
-							<td><input type="text" name="comment"></td>
+							<td><textarea form="comment_form" name="comment">Enter comment here...</textarea></td>
 						</tr>
 						<tr>
 							<td colspan="2"><input type="submit"></td>
@@ -96,5 +113,18 @@
 				</form>
 			</div>
 		</div>
+		<script>
+			$('#loginButton').click(function() {
+				$('#login_area').css('display','inline');
+			});
+			
+			$('#storyButton').click(function() {
+				$('#story_area').css('display','inline');
+			});
+			
+			$('.cross').click(function() {
+				$('.form_area').css('display','none');
+			})
+		</script>
 	</body>
 </html>

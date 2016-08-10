@@ -15,7 +15,7 @@ session_start();
 		<!--End of Meta Tags-->
 		
 		<!--External CSS and JavaScript Files-->
-		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/style.css">
 		<script src="js/script.js"></script>
 		<!--End of external files-->
 		<!--jQuery from Google-->
