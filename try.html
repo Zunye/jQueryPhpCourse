@@ -54,6 +54,16 @@
 				left:10%;
 				top:15%;
 			}
+			.cross
+			{
+				float:right;
+				margin-right:10px;
+				font-size:20px;
+			}
+			.cross:hover
+			{
+				cursor: pointer;
+			}
 		</style>
 	</head>
 	<body>
@@ -81,6 +91,9 @@
 		</div>
 		<div id="login_area">
 			<div id="login_field">
+				<div class="cross">
+					x
+				</div>
 				<form action="welcome.php" method="post">
 					<table>
 						<tr>
@@ -101,6 +114,9 @@
 		<script>
 		$('.button').click(function() {
 			$('#login_area').css('display','inline');
+		})
+		$('.cross').click(function() {
+			$('#login_area').css('display','none');
 		})
 		</script>
 	</body>
