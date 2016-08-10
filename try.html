@@ -46,7 +46,7 @@
 	</head>
 	<body>
 		<header>
-			<a href="login.php" class="button" onclick="var logBut = document.getElementById('login_area').style.display='inline'; ">Login-Button</a>
+			<a href="#" class="button">Login-Button</a>
 		</header>
 		<div class="mainPage">
 			<p>Some Text with an Image</p>
@@ -86,5 +86,10 @@
 				</form>
 			</div>
 		</div>
+		<script>
+		$('.button').click(function() {
+			$('#login_area').css('display','inline');
+		})
+		</script>
 	</body>
 </html>
