@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+	<head>
+		<title>Moomins - Fun in Helsinki</title>
+		
+		<!--Meta Tags-->
+		<meta charset="UTF-8">
+		<meta name="description" content="Moomins - Fun in Helsinki with nice stories">
+		<meta name="keywords" content="Moomins,Helsinki,Traveltips,Stories">
+		<meta name="author" content="Zarina, Menno, Benjamin">
+		<!--End of Meta Tags-->
+		
+		<!--External CSS and JavaScript Files-->
+		<link rel="stylesheet" href="css/styles.css">
+		<script src="script.js"></script>
+		<!--End of external files-->
+		<!--jQuery from Google-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<!--End of jQuery from Google-->
+		<style>
+			#login_area{
+				background:rgba(255,255,255,0.5);
+				width:100%;
+				height:100%;
+				z-index:2;
+				position:absolute;
+				left:0px;
+				top:0px;
+				display:none;
+			}
+			#login_field{
+				background-color:red;
+				width:25%;
+				height:25%;
+				z-index:3;
+				position:absolute;
+				left:25%;
+				top:25%;
+			}
+			#login_area form{
+				font-size:150%;
+				position:relative;
+				left:10%;
+				top:15%;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<a href="login.php" class="button" onclick="var logBut = document.getElementById('login_area').style.display='inline'; ">Login-Button</a>
+		</header>
+		<div class="mainPage">
+			<p>Some Text with an Image</p>
+		</div>
+		<div class="storyShortcut">
+			<a href="#story1">Story 1</a>
+			<a href="#story2">Story 2</a>
+			<a href="#story3">Story 3</a>
+		</div>
+		<div class="storyPages">
+			<div id="story1">
+				<p>First story</p>
+			</div>
+			<div id="story2">
+				<p>Second story</p>
+			</div>
+			<div id="story3">
+				<p>Third story</p>
+			</div>
+		</div>
+		<div id="login_area">
+			<div id="login_field">
+				<form action="welcome.php" method="post">
+					<table>
+						<tr>
+							<td>Name/Email:</td>
+							<td><input type="text" name="name"></td>
+						</tr>
+						<tr>
+							<td>Password:</td>
+							<td><input type="text" name="pw"></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="submit"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
