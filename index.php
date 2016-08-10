@@ -41,5 +41,81 @@
 				<p>Third story</p>
 			</div>
 		</div>
+		<div id="login_area" class="formArea">
+			<div id="login_field" class="formField">
+				<form action="welcome.php" method="post">
+					<table>
+						<tr>
+							<td>Name/Email:</td>
+							<td><input type="text" name="name"></td>
+						</tr>
+						<tr>
+							<td>Password:</td>
+							<td><input type="text" name="pw"></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="submit"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div id="registration_area" class="formArea">
+			<div id="registration_field" class="formField">
+				<form action="welcome.php" method="post">
+					<table>
+						<tr>
+							<td>Email:</td>
+							<td><input type="text" name="mail"></td>
+						</tr>
+						<tr>
+							<td>Password:</td>
+							<td><input type="text" name="pw"></td>
+						</tr>
+						<tr>
+							<td>Repeat Password:</td>
+							<td><input type="text" name="rpw"></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="submit"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div id="story_area" class="formArea">
+			<div id="story_field" class="formField">
+				<form action="welcome.php" method="post">
+					<table>
+						<tr>
+							<td>Title:</td>
+							<td><input type="text" name="title"></td>
+						</tr>
+						<tr>
+							<td>Story:</td>
+							<td><input type="text" name="story"></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="submit"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div id="comment_area" class="formArea">
+			<div id="comment_field" class="formField">
+				<form action="welcome.php" method="post">
+					<table>
+						<tr>
+							<td>Comment:</td>
+							<td><input type="text" name="comment"></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="submit"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
 	</body>
 </html>
