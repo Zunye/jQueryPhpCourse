@@ -1,6 +1,23 @@
-		<?php include("top.php"); ?>
+<?php 
+	session_start();
+	include("top.php"); 
+?>
 		<header>
-			<a href="#" id="loginButton" class="button">Login-Button</a>
+<?php
+	if(isset($_SESSION['name']))
+	{
+		echo "<a href='logout.php' id='logoutButton' class='button'>Logout-Button
+		Hello {$_SESSION['name']}
+		";
+
+	}else
+	{
+		echo "<a href='#' id='loginButton' class='button'>Login-Button
+			<a href='#' id='registerButton' class='button'>Register-Button
+		";
+
+	}
+?>
 			<a href="#" id="storyButton" class="button">Story-Button</a>
 		</header>
 		<div id="home_image">
@@ -52,22 +69,26 @@
 				<div class="cross">
 					x
 				</div>
-				<form action="welcome.php" method="post" id="register_form">
+				<form action="registration.php" method="post" id="register_form">
 					<table>
 						<tr>
+							<td>Name:</td>
+							<td><input type="text" name="name" required></td>
+						</tr>
+						<tr>
 							<td>Email:</td>
-							<td><input type="text" name="mail"></td>
+							<td><input type="text" name="mail" required></td>
 						</tr>
 						<tr>
 							<td>Password:</td>
-							<td><input type="text" name="pw"></td>
+							<td><input type="text" name="pw" required></td>
 						</tr>
 						<tr>
 							<td>Repeat Password:</td>
-							<td><input type="text" name="rpw"></td>
+							<td><input type="text" name="rpw" required></td>
 						</tr>
 						<tr>
-							<td colspan="2"><input type="submit"></td>
+							<td colspan="2"><input type="submit" name="submit"></td>
 						</tr>
 					</table>
 				</form>
@@ -116,6 +137,10 @@
 		<script>
 			$('#loginButton').click(function() {
 				$('#login_area').css('display','inline');
+			});
+
+			$('#registerButton').click(function() {
+				$('#registration_area').css('display','inline');
 			});
 			
 			$('#storyButton').click(function() {
