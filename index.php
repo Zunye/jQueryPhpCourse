@@ -30,7 +30,7 @@
 			<div class="cross">
 					x
 				</div>
-				<form action="welcome.php" method="post" id="login_form">
+				<form action="login.php" method="post" id="login_form">
 					<table>
 						<tr>
 							<td>Name/Email:</td>
@@ -38,10 +38,10 @@
 						</tr>
 						<tr>
 							<td>Password:</td>
-							<td><input type="text" name="pw"></td>
+							<td><input type="password" name="pw"></td>
 						</tr>
 						<tr>
-							<td colspan="2"><input type="submit"></td>
+							<td colspan="2"><input type="submit" name="submit"></td>
 						</tr>
 					</table>
 				</form>
