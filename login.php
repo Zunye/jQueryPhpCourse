@@ -20,14 +20,16 @@ if(isset($_POST['submit']))
 			$password 	= $_POST['pw'];
 
 			echo 'password exists';
-			$sql = "SELECT name, password FROM users WHERE name = '{$name}' AND password = '{$password}'";
+			$sql = "SELECT name, id FROM users WHERE name = '{$name}' AND password = '{$password}'";
 			$result = $con->query($sql);
 			
 
 			if($result->num_rows > 0)
 			{
+				$data = $result->fetch_assoc();
 				echo 'user exists';
-				$_SESSION['name'] = $name;
+				$_SESSION['user']['id'] = $data["id"];
+				$_SESSION['user']['name'] = $data["name"];
 				header('location: index.php');
 			}
 		}

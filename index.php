@@ -4,10 +4,11 @@
 ?>
 		<header>
 <?php
-	if(isset($_SESSION['name']))
+var_dump($_SESSION);
+	if(isset($_SESSION['user']))
 	{
 		echo "<a href='logout.php' id='logoutButton' class='button'>Logout-Button
-		Hello {$_SESSION['name']}
+		Hello {$_SESSION['user']['name']}
 		";
 
 	}else

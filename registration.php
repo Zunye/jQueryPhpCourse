@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$con = mysqli_connect("localhost","root","","finland");
+	$conn = mysqli_connect("localhost","root","","finland");
 
 	if(isset($_POST['submit']))
 	{
@@ -11,10 +11,11 @@
 			$pw 	= $_POST['pw'];
 			$rpw 	= $_POST['rpw'];
 
-			$sql = "INSERT INTO users (name, password, email) VALUES ('{$name}', '{$email}','{$pw}')";
+			$sql = "INSERT INTO users (name, password, email) VALUES ('{$name}', '{$pw}','{$email}')";
 
 			if ($conn->query($sql) === TRUE) {
-			    echo "New record created successfully";
+			    echo "New record created successfully
+				header('location: index.php');
 			} else {
 			    echo "Error: " . $sql . "<br>" . $conn->error;
 			}

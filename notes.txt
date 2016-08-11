@@ -1,2 +1,5 @@
 Make an "add story" button maybe in the header.
 Take the picture in the header as a "back to mainpage" link.
+
+story + comment + when you hover over or click on it the story it pops open.
+on the bottom is the comment button
